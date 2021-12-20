@@ -75,14 +75,14 @@ else printf 'no npm installation detected...\n\n'; fi
 printf 'checking for RubyGems installation...\n'
 if command -v gem >/dev/null 2>&1; then
   printf 'updating RubyGems...\n'
-  command gem update --system
-  gem update
-  if command bundle update >/dev/null 2>&1; then command bundle update 2>/dev/null; fi
+  command gem update --system --verbose
+  command gem update --verbose
+  if command bundle update >/dev/null 2>&1; then command bundle update --verbose 2>/dev/null; fi
   if command bundle install >/dev/null 2>&1; then command bundle install --verbose 2>/dev/null; fi
   if command bundle exec pod install >/dev/null 2>&1; then command bundle exec pod install --verbose 2>/dev/null; fi
   if command pod repo update >/dev/null 2>&1; then
-    command pod repo update
-    command pod repo update
+    command pod repo update --verbose
+    command pod repo update --verbose
   fi
 else printf 'no RubyGems installation detected...\n\n'; fi
 if command -v rbenv >/dev/null 2>&1; then command rbenv rehash; fi
