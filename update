@@ -128,4 +128,4 @@ test -r "${HOME-}/.${SHELL##*[-./]}rc" && . "${HOME-}/.${SHELL##*[-./]}rc"
 if command -v rehash >/dev/null 2>&1; then rehash; fi
 unset update
 printf '\n\n\342%s\234\205  done\041\n' "${update-}"
-builtin exec -l -- "${SHELL##*[-./]}" # 2021-11-30
+builtin exec -l -- "${SHELL##*[-./]}" # 2021-12-20
