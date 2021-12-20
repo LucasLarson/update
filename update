@@ -102,6 +102,11 @@ if command -v python >/dev/null 2>&1; then
     printf 'rehashing pyenv shims...\n'
     command pyenv rehash
   else printf 'no pyenv installation detected...\n\n'; fi
+  printf 'checking for Bashhub installation...\n'
+  if command -v bashhub >/dev/null 2>&1; then
+    printf 'checking for Bashhub updates...\n'
+    command bashhub update
+  else printf 'no Bashhub installation detected...\n\n'; fi
   printf 'checking for Conda installation...\n'
   if command -v conda >/dev/null 2>&1; then command conda update --yes --all; else printf 'no Conda installation detected...\n\n'; fi
 fi
