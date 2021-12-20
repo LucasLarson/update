@@ -79,6 +79,7 @@ if command -v gem >/dev/null 2>&1; then
   command gem update --verbose
   if command bundle update >/dev/null 2>&1; then command bundle update --verbose 2>/dev/null; fi
   if command bundle install >/dev/null 2>&1; then command bundle install --verbose 2>/dev/null; fi
+  printf 'checking for CocoaPods installation...\n'
   if command bundle exec pod install >/dev/null 2>&1; then command bundle exec pod install --verbose 2>/dev/null; fi
   if command pod repo update >/dev/null 2>&1; then
     command pod repo update --verbose
