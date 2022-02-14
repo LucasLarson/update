@@ -118,7 +118,6 @@ fi
   set +o verbose
   set +o xtrace
 } 2>/dev/null
-# shellcheck source=/dev/null
 test -r "${HOME-}/.${SHELL##*[-./]}rc" && . "${HOME-}/.${SHELL##*[-./]}rc"
 if command -v rehash >/dev/null 2>&1; then rehash; fi
 unset update
