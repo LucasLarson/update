@@ -110,6 +110,7 @@ if command -v omz >/dev/null 2>&1; then
   omz update 2>/dev/null
 fi
 {
+  set -o allexport
   set +o errexit
   set +o nounset
   set +o verbose
