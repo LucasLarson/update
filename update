@@ -28,6 +28,7 @@ if command -v brew >/dev/null 2>&1; then
   command brew upgrade --greedy
   command brew upgrade --cask --greedy
   command brew install --debug --verbose --include-test --HEAD --display-times --git -- git mackup shellcheck shfmt zsh
+  command brew generate-man-completions
 else printf 'No Homebrew installation detected.\n\n'; fi
 printf '\360\237\217\224  checking for Alpine Package Keeper installation...\n'
 if command -v apk >/dev/null 2>&1; then
