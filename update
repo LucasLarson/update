@@ -64,9 +64,9 @@ printf 'checking for npm installation...\n'
 if command -v npm >/dev/null 2>&1; then
   printf '...and whether this device is can update Node quickly...\n'
   if test "$((${COLUMNS:-80} * ${LINES:-24}))" -ge "$((80 * 24))"; then
-    while test -n "$(command find -- "${HOME-}"'/.npm-packages' -type f ! -name "$(printf "*\n*")" -name '.DS_Store' -print)"; do command find -- "${HOME-}"'/.npm-packages' -type f ! -name "$(printf "*\n*")" -name '.DS_Store' -print -delete; done
+    while test -n "$(command find -- "${HOME-}"'/.npm-packages' -type f -name '.DS_Store' -print)"; do command find -- "${HOME-}"'/.npm-packages' -type f -name '.DS_Store' -print -delete; done
     command npm install npm --global
-    while test -n "$(command find -- "${HOME-}"'/.npm-packages' -type f ! -name "$(printf "*\n*")" -name '.DS_Store' -print)"; do command find -- "${HOME-}"'/.npm-packages' -type f ! -name "$(printf "*\n*")" -name '.DS_Store' -print -delete; done
+    while test -n "$(command find -- "${HOME-}"'/.npm-packages' -type f -name '.DS_Store' -print)"; do command find -- "${HOME-}"'/.npm-packages' -type f -name '.DS_Store' -print -delete; done
     command npm update --global --verbose
   else
     printf 'skipping Node update...\n\n'
