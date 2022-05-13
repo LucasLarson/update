@@ -109,6 +109,7 @@ if command -v -- python >/dev/null 2>&1; then
   printf 'checking for Conda installation...\n'
   if command -v -- conda >/dev/null 2>&1; then command conda update --yes --all; else printf 'no Conda installation detected.\n\n'; fi
 fi
+command brew bundle dump --all --cask --debug --describe --force --formula --global --mas --tap --verbose --whalebrew
 if command -v -- omz >/dev/null 2>&1; then omz update 2>/dev/null; fi
 # shellcheck source=/dev/null
 test -r "${HOME-}"'/.'"${SHELL##*[-./]}"'rc' && . "${HOME-}"'/.'"${SHELL##*[-./]}"'rc'
