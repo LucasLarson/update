@@ -15,7 +15,6 @@ while test "${i-}" -lt "$(printf '2 ^ 7 + 1\n' | command bc)"; do
 done
 unset i
 printf '\n\n'
-set -o nounset
 { command ping -q -i 1 -c 1 -- one.one.one.one >/dev/null 2>&1 && command ping -q -i 1 -c 1 -- 8.8.8.8 >/dev/null 2>&1; } || {
   printf 'No internet connection detected.\nAborting update.\n'
   exit "${update:-1}"
@@ -111,17 +110,8 @@ if command -v -- python >/dev/null 2>&1; then
   if command -v -- conda >/dev/null 2>&1; then command conda update --yes --all; else printf 'no Conda installation detected.\n\n'; fi
 fi
 if command -v -- omz >/dev/null 2>&1; then
-  { set +o nounset; } 2>/dev/null
   omz update 2>/dev/null
 fi
-{
-  set -o allexport
-  set +o errexit
-  set +o noclobber
-  set +o nounset
-  set +o verbose
-  set +o xtrace
-} 2>/dev/null
 # shellcheck source=/dev/null
 test -r "${HOME-}"'/.'"${SHELL##*[-./]}"'rc' && . "${HOME-}"'/.'"${SHELL##*[-./]}"'rc'
 if command -v -- rehash >/dev/null 2>&1; then rehash; fi
