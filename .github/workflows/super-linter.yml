@@ -1,0 +1,53 @@
+---
+#########################
+#########################
+## GitHub Super-Linter ##
+#########################
+#########################
+name: Super-Linter
+
+#
+# Documentation:
+# https://bit.ly/git-io_workflow-syntax-for-github-actions
+#
+
+#############################
+# Start the job on all push #
+#############################
+on:
+  push:
+
+###############
+# Set the Job #
+###############
+jobs:
+  build:
+    # Name the Job
+    name: Lint Code Base
+    # Set the agent to run on
+    runs-on: ubuntu-latest
+
+    ##################
+    # Load all steps #
+    ##################
+    steps:
+      ##########################
+      # Checkout the code base #
+      ##########################
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          # Super-Linter requires full repository history for analysis
+          fetch-depth: 0
+
+      ################################
+      # Run Linter against code base #
+      ################################
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          # unset `GITHUB_TOKEN` permitted, but should be passed
+          # https://github.com/github/super-linter/tree/44e48abb43#how-to-use
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
