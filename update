@@ -17,7 +17,7 @@ unset i
 printf '\n\n'
 { command ping -q -i 1 -c 1 -- one.one.one.one >/dev/null 2>&1 && command ping -q -i 1 -c 1 -- 8.8.8.8 >/dev/null 2>&1; } || {
   printf 'No internet connection detected.\nAborting update.\n'
-  exit "${update:-1}"
+  return "${update:-1}"
 }
 printf '\360\237\215\272  checking for Homebrew installation...'
 if command -v -- brew >/dev/null 2>&1; then
