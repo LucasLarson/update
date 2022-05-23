@@ -15,7 +15,7 @@ while test "${i-}" -lt "$(printf '2 ^ 7 + 1\n' | command bc)"; do
 done
 unset i
 printf '\n\n'
-{ command ping -q -c 1 -- one.one.one.one >/dev/null 2>&1 && command ping -q -c 1 -- 8.8.8.8 >/dev/null 2>&1; } || {
+{ command ping -c 1 -- one.one.one.one >/dev/null 2>&1 && command ping -c 1 -- 8.8.8.8 >/dev/null 2>&1; } || {
   printf 'No internet connection detected.\nAborting update.\n'
   return "${update:-1}"
 }
