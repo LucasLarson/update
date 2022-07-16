@@ -117,4 +117,4 @@ test -r "${HOME-}"'/.'"${SHELL##*[-./]}"'rc' && . "${HOME-}"'/.'"${SHELL##*[-./]
 if command -v -- rehash >/dev/null 2>&1; then rehash; fi
 unset update
 printf '\n\342%s\234\205  update complete\n' "${update-}"
-$(command -v -- exec) -l -- "${SHELL##*[-./]}"
+"$(command -v -- exec)" -l -- "${SHELL##*[-./]}"
