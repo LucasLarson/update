@@ -1,0 +1,13 @@
+== update
+
+Inspired by https://github.com/hisaac/hisaac.net/commit/b180460aca[@*hisaac*^]’s
+`update-all-the-things`, found while admiring this
+https://github.com/hisaac/Tiime[decimal-time&nbsp;clock^],
+https://github.com/LucasLarson/update/blob/HEAD/update[this^] is a shell script
+that updates all my frequently used and updateable software
+and&nbsp;packages.
+
+=== License
+Licensed under the
+https://github.com/LucasLarson/update/blob/HEAD/license.adoc[GNU General
+Public License v3.0^] or&nbsp;later.
