@@ -7,7 +7,12 @@
     "displayMode": "diff"
   },
   "issueSettings": {
-    "minSeverityLevel": "LOW",
-    "issueType": "DEPENDENCY"
+    "minSeverityLevel": "LOW"
+  },
+  "remediateSettings": {
+    "enableRenovate": true,
+    "extends": [
+      "config:base"
+    ]
   }
 }
