@@ -98,7 +98,7 @@ if command -v -- python3 >/dev/null 2>&1; then
   printf 'verifying pip installation...\n'
   if command -v -- pip >/dev/null 2>&1; then
     printf '\n\360\237\220\215  updating outdated Python packages...\n'
-    for package in $(command pip list --outdated --format freeze); do command pip install --upgrade --verbose --verbose --verbose -- "${package%%=*}"; done
+    command pip list --outdated --format freeze | while read -r package; do command pip install --upgrade --verbose --verbose --verbose -- "${package%%=*}"; done
     unset package
   fi
   printf 'checking for pyenv installation...\n'
