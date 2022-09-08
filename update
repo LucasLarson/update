@@ -108,7 +108,7 @@ if command -v -- python3 >/dev/null 2>&1; then
   printf 'checking for Conda installation...\n'
   if command -v -- conda >/dev/null 2>&1; then command conda update --yes --all; else printf 'no Conda installation detected.\n\n'; fi
 fi
-command brew generate-man-completions --debug --verbose
+command brew generate-man-completions --debug --verbose 2>/dev/null
 command brew bundle dump --all --cask --debug --describe --force --formula --global --mas --tap --verbose --whalebrew
 if command -v -- omz >/dev/null 2>&1; then omz update 2>/dev/null; fi
 # shellcheck source=/dev/null
