@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+## [v1.0.0](https://github.com/LucasLarson/update/tree/v1.0.0) (2022-08-23)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v0.0.0...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v0.0.0...v1.0.0)
 
 **Implemented enhancements:**
 
