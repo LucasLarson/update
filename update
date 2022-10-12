@@ -63,15 +63,15 @@ if command -v -- npm >/dev/null 2>&1; then
   printf '...and whether this device is can update Node quickly...\n'
   if test "$((${COLUMNS:-80} * ${LINES:-24}))" -ge "$((80 * 24))"; then
     while test -n "$(command find -- "${HOME-}"'/.npm-packages' -type f -name '.DS_Store' -print)"; do command find -- "${HOME-}"'/.npm-packages' -type f -name '.DS_Store' -print -delete; done
-    command npm install npm --global
+    command npm install npm --location=global
     while test -n "$(command find -- "${HOME-}"'/.npm-packages' -type f -name '.DS_Store' -print)"; do command find -- "${HOME-}"'/.npm-packages' -type f -name '.DS_Store' -print -delete; done
-    command npm update --global --verbose
+    command npm update --location=global --loglevel=verbose
   else
     printf 'skipping Node update...\n\n'
     command sleep 1
     printf 'to update Node later, run:\n\n'
-    printf '    npm install npm --global \046\046 \134\n'
-    printf '    npm update --global --verbose\n\n\n'
+    printf '    npm install npm --location=global \046\046 \134\n'
+    printf '    npm update --location=global --loglevel=verbose\n\n\n'
     command sleep 3
   fi
 else printf 'no npm installation detected.\n\n'; fi
