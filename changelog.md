@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.0.0...HEAD)
+
+**Merged pull requests:**
+
+- replace deprecated npm syntax \(\#13\) [\#14](https://github.com/LucasLarson/update/pull/14) ([LucasLarson](https://github.com/LucasLarson))
+
 ## [v1.0.0](https://github.com/LucasLarson/update/tree/v1.0.0) (2022-08-23)
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v0.0.0...v1.0.0)
