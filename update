@@ -109,7 +109,7 @@ if command -v -- python3 >/dev/null 2>&1; then
   if command -v -- conda >/dev/null 2>&1; then command conda update --yes --all; else printf 'no Conda installation detected.\n\n'; fi
 fi
 command brew generate-man-completions --debug --verbose 2>/dev/null
-command brew bundle dump --all --cask --debug --describe --file=- --force --formula --mas --tap --verbose --whalebrew | command sed -e '$!N;/^#.*\n[^#]/s/\n/\t/;P;D' | command awk -F '\t' -- '{print $2 $1}' | command sed -E -e 's/^(tap)/0\1/' -e 's/^(brew)/1\1/' -e 's/^(cask)/2\1/' | LC_ALL='C' command sort -f | command sed -e 's/^[[:digit:]]//' | command sed -e 's/\([^#]*\)\(#.*\)/\2\n\1/' >"${HOME-}"'/.Brewfile'
+command brew bundle dump --all --cask --debug --describe --file=- --force --formula --mas --tap --verbose --whalebrew | command sed -e '$!N;/^#.*\n[^#]/s/\n/\t/;P;D' | command awk -F '\t' -- '{print $2 $1}' | command sed -E -e 's/^(tap)/1\1/' -e 's/^(brew)/2\1/' -e 's/^(cask)/3\1/' | LC_ALL='C' command sort -f | command sed -e 's/^[[:digit:]]//' | command sed -e 's/\([^#]*\)\(#.*\)/\2\n\1/' >"${HOME-}"'/.Brewfile'
 if command -v -- omz >/dev/null 2>&1; then omz update 2>/dev/null; fi
 # shellcheck source=/dev/null
 test -r "${HOME-}"'/.'"${SHELL##*[-./]}"'rc' && . "${HOME-}"'/.'"${SHELL##*[-./]}"'rc'
