@@ -27,18 +27,18 @@ if command -v -- brew >/dev/null 2>&1; then
   command brew update
   command brew upgrade --greedy
   command brew upgrade --cask --greedy
-  command brew install --debug --verbose --HEAD --display-times --git -- git
-  command brew install --debug --verbose --HEAD --display-times --git -- mackup
-  command brew install --debug --verbose --HEAD --display-times --git -- shellcheck
-  command brew install --debug --verbose --HEAD --display-times --git -- shfmt
-  command brew install --debug --verbose --HEAD --display-times --git -- zsh
+  command brew install --debug --display-times --git --HEAD --verbose -- git
+  command brew install --debug --display-times --git --HEAD --verbose -- mackup
+  command brew install --debug --display-times --git --HEAD --verbose -- shellcheck
+  command brew install --debug --display-times --git --HEAD --verbose -- shfmt
+  command brew install --debug --display-times --git --HEAD --verbose -- zsh
 else printf 'No Homebrew installation detected.\n\n'; fi
 printf '\360\237\217\224  checking for Alpine Package Keeper installation...\n'
 if command -v -- apk >/dev/null 2>&1; then
   printf '\360\237\217\224  apk update...\n'
   command apk update --progress --verbose --verbose
   printf '\n\360\237\217\224  apk upgrade...\n'
-  command apk upgrade --update-cache --progress --verbose --verbose
+  command apk upgrade --progress --update-cache --verbose --verbose
   printf '\n\360\237\217\224  apk fix...\n'
   command apk fix --progress --verbose --verbose
   printf '\n\360\237\217\224  apk verify...\n'
@@ -48,7 +48,7 @@ else printf 'no Alpine Package Keeper installation detected.\n\n'; fi
 printf 'checking access to Software Update...\n'
 if command -v -- softwareupdate >/dev/null 2>&1; then
   printf '\360\237\215\216  '
-  command softwareupdate --list --all --verbose
+  command softwareupdate --all --list --verbose
 else printf 'no Software Update installation detected.\n\n'; fi
 printf 'checking for Xcode installation...\n'
 if command -v -- xcrun >/dev/null 2>&1; then
@@ -107,7 +107,7 @@ if command -v -- python3 >/dev/null 2>&1; then
     command pyenv rehash
   else printf 'no pyenv installation detected.\n\n'; fi
   printf 'checking for Conda installation...\n'
-  if command -v -- conda >/dev/null 2>&1; then command conda update --yes --all; else printf 'no Conda installation detected.\n\n'; fi
+  if command -v -- conda >/dev/null 2>&1; then command conda update --all --yes; else printf 'no Conda installation detected.\n\n'; fi
 fi
 command brew generate-man-completions --debug --verbose 2>/dev/null
 command brew bundle dump --all --cask --debug --describe --file=- --force --formula --mas --tap --verbose --whalebrew | command sed -e '$!N;/^#.*\n[^#]/s/\n/\t/;P;D' | command awk -F '\t' -- '{print $2 $1}' | command sed -E -e 's/^(tap)/1\1/' -e 's/^(brew)/2\1/' -e 's/^(cask)/3\1/' | LC_ALL='C' command sort -f | command sed -e 's/^[[:digit:]]//' | command sed -e 's/\([^#]*\)\(#.*\)/\2\n\1/' >"${HOME-}"'/.Brewfile'
