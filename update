@@ -25,8 +25,8 @@ if command -v -- brew >/dev/null 2>&1; then
   printf '  \342\234\205  found\n'
   printf '\360\237\215\272  checking for Homebrew updates...\n'
   command brew update
-  command brew upgrade --greedy
   command brew upgrade --cask --greedy
+  command brew upgrade --greedy
   command brew install --debug --display-times --git --HEAD --verbose -- git
   command brew install --debug --display-times --git --HEAD --verbose -- mackup
   command brew install --debug --display-times --git --HEAD --verbose -- shellcheck
