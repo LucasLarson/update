@@ -114,7 +114,7 @@ if command -v -- python3 >/dev/null 2>&1; then
 fi
 if command -v -- brew >/dev/null 2>&1; then
   command brew generate-man-completions --debug --verbose 2>/dev/null
-  command brew bundle dump --all --cask --debug --describe --file=- --force --formula --mas --tap --verbose --whalebrew | command sed -e '$!N' -e '/^#.*\n[^#]/s/\n/\t/' -e 'P' -e 'D' | command awk -F '\t' -- '{print $2 $1}' | command sed -e 's/^\(tap\)/1\1/' -e 's/^\(brew\)/2\1/' -e 's/^\(cask\)/3\1/' | LC_ALL='C' command sort -f | command sed -e 's/^[[:digit:]]//' | command sed -e 's/\([^#]*\)\(#.*\)/\2\n\1/' >"${HOME-}"'/.Brewfile'
+  command brew bundle dump --all --cask --debug --describe --file=- --force --formula --mas --tap --verbose --whalebrew | command sed -e '$!N' -e '/^#.*\n[^#]/s/\n/\t/' -e 'P' -e 'D' | command awk -F '\t' -- '{print $2 $1}' | command sed -e 's/^\(tap\)/1\1/' -e 's/^\(brew\)/2\1/' -e 's/^\(cask\)/3\1/' | LC_ALL='C' command sort -f | command sed -e 's/^[[:digit:]]//' -e 's/\([^#]*\)\(#.*\)/\2\n\1/' >"${HOME-}"'/.Brewfile'
 fi
 if command -v -- omz >/dev/null 2>&1; then omz update 2>/dev/null; fi
 # shellcheck source=/dev/null
