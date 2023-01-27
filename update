@@ -77,7 +77,7 @@ if command -v -- npm >/dev/null 2>&1; then
     printf -- '    npm update --location=global --loglevel=verbose\n\n\n'
     command sleep 3
   fi
-  command npm ls --json --location=global --json --loglevel=verbose >"${DOTFILES:-${HOME-}}"'/.package-list.json'
+  command npm ls --json --location=global --loglevel=verbose >"${DOTFILES:-${HOME-}}"'/.package-list.json'
 else printf -- 'no npm installation detected.\n\n'; fi
 printf -- 'checking for RubyGems installation...\n'
 if command -v -- gem >/dev/null 2>&1; then
