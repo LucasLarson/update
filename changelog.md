@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.0.0...HEAD)
 
+**Implemented enhancements:**
+
+- ensure `~/.Brewfile` opens with Ruby hashbang [\#17](https://github.com/LucasLarson/update/pull/17) ([LucasLarson](https://github.com/LucasLarson))
+
 **Merged pull requests:**
 
 - replace deprecated npm syntax \(\#13\) [\#14](https://github.com/LucasLarson/update/pull/14) ([LucasLarson](https://github.com/LucasLarson))
