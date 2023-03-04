@@ -97,11 +97,11 @@ if command -v -- rbenv >/dev/null 2>&1; then command rbenv rehash; fi
 if command -v -- c_rehash >/dev/null 2>&1; then command c_rehash; fi
 if command -v -- python3 >/dev/null 2>&1; then
   printf -- '\n\360\237\220\215  verifying Python\342\200\231s packager is up to date...\n'
-  command python3 -m pip install --upgrade --verbose --verbose --verbose -- pip
+  command python3 -m pip install --upgrade --verbose --verbose -- pip
   printf -- 'verifying pip installation...\n'
   if command -v -- pip >/dev/null 2>&1; then
     printf -- '\n\360\237\220\215  updating outdated Python packages...\n'
-    command pip list --outdated | command awk -- 'NR > 2 {print $1}' | while IFS='' read -r package; do command pip install --upgrade --verbose --verbose --verbose -- "${package%%=*}"; done
+    command pip list --outdated | command awk -- 'NR > 2 {print $1}' | while IFS='' read -r package; do command pip install --upgrade --verbose --verbose -- "${package%%=*}"; done
     unset -v -- package 2>/dev/null
   fi
   printf -- 'checking for pyenv installation...\n'
