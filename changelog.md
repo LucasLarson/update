@@ -6,10 +6,12 @@
 
 **Implemented enhancements:**
 
+- find syntax [\#19](https://github.com/LucasLarson/update/issues/19)
 - ensure `~/.Brewfile` opens with Ruby hashbang [\#17](https://github.com/LucasLarson/update/pull/17) ([LucasLarson](https://github.com/LucasLarson))
 
 **Merged pull requests:**
 
+- optimize `find` commands [\#21](https://github.com/LucasLarson/update/pull/21) ([LucasLarson](https://github.com/LucasLarson))
 - replace deprecated npm syntax \(\#13\) [\#14](https://github.com/LucasLarson/update/pull/14) ([LucasLarson](https://github.com/LucasLarson))
 
 ## [v1.0.0](https://github.com/LucasLarson/update/tree/v1.0.0) (2022-08-23)
