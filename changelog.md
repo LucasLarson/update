@@ -15,6 +15,8 @@
 
 **Merged pull requests:**
 
+- use more common npm syntax [\#24](https://github.com/LucasLarson/update/pull/24) ([LucasLarson](https://github.com/LucasLarson))
+- send informational text to standard error [\#23](https://github.com/LucasLarson/update/pull/23) ([LucasLarson](https://github.com/LucasLarson))
 - send informational text to standard error [\#22](https://github.com/LucasLarson/update/pull/22) ([LucasLarson](https://github.com/LucasLarson))
 - optimize `find` commands [\#21](https://github.com/LucasLarson/update/pull/21) ([LucasLarson](https://github.com/LucasLarson))
 - replace deprecated npm syntax \(\#13\) [\#14](https://github.com/LucasLarson/update/pull/14) ([LucasLarson](https://github.com/LucasLarson))
