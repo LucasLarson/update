@@ -101,7 +101,7 @@ if command -v -- python3 >/dev/null 2>&1; then
   printf -- 'verifying pip installation...\n' >&2
   if command -v -- pip >/dev/null 2>&1; then
     printf -- '\n\360\237\220\215  updating outdated Python packages...\n' >&2
-    command pip list --outdated | command awk -- 'NR > 2 {print $1}' | while IFS='' read -r package; do command pip install --upgrade --verbose --verbose -- "${package%%=*}"; done
+    command pip list --format=columns --outdated | command awk -- 'NR > 2 {print $1}' | while IFS='' read -r package; do command pip install --upgrade --verbose --verbose -- "${package-}"; done
     unset -v -- package 2>/dev/null
   fi
   printf -- 'checking for pyenv installation...\n' >&2
