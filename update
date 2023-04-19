@@ -121,8 +121,8 @@ if command -v -- brew >/dev/null 2>&1; then
 fi
 if command -v -- omz >/dev/null 2>&1; then omz update 2>/dev/null; fi
 # shellcheck source=/dev/null
-test -r "${HOME%/}"'/.'"${SHELL##*[-./]}"'rc' && . "${HOME%/}"'/.'"${SHELL##*[-./]}"'rc'
+test -r "${HOME%/}"'/.'"${SHELL##*/}"'rc' && . "${HOME%/}"'/.'"${SHELL##*/}"'rc'
 if command -v -- rehash >/dev/null 2>&1; then rehash; fi
 unset -v -- update 2>/dev/null
 command printf -- '\n\342%s\234\205  update complete\n' "${update-}" >&2
-"$(command -v -- exec)" -l -- "${SHELL##*[-./]}"
+"$(command -v -- exec)" -l -- "${SHELL##*/}"
