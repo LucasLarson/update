@@ -8,7 +8,7 @@ unset -v -- PS4 2>/dev/null
 command printf -- '\360\237\223\241  verifying network connectivity' >&2
 command sleep 1
 i='0'
-while test "${i-}" -lt "$(command printf -- '2 ^ 7 + 1\n' | command bc)"; do
+while test "${i-}" -lt "$(command getconf -- CHAR_MAX)"; do
   if test "$((i / 3 % 2))" -eq '0'; then command printf -- '.' >&2; else command printf -- '\b' >&2; fi
   i="$((i + 1))"
 done
