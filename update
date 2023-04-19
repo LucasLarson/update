@@ -120,7 +120,7 @@ if command -v -- brew >/dev/null 2>&1; then
   } >"${HOME%/}"'/.Brewfile'
 fi
 if command -v -- omz >/dev/null 2>&1; then omz update 2>/dev/null; fi
-# shellcheck source=/dev/null
+# shellcheck disable=SC1090
 test -r "${HOME%/}"'/.'"$(command basename -- "${SHELL%%[0-9-]*}")"'rc' && . "${HOME%/}"'/.'"$(command basename -- "${SHELL%%[0-9-]*}")"'rc'
 if command -v -- rehash >/dev/null 2>&1; then rehash; fi
 unset -v -- update 2>/dev/null
