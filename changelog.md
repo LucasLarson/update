@@ -15,6 +15,7 @@
 
 **Merged pull requests:**
 
+- bump github/super-linter from 4 to 5 [\#26](https://github.com/LucasLarson/update/pull/26) ([dependabot[bot]](https://github.com/apps/dependabot))
 - use more common npm syntax [\#24](https://github.com/LucasLarson/update/pull/24) ([LucasLarson](https://github.com/LucasLarson))
 - send informational text to standard error [\#23](https://github.com/LucasLarson/update/pull/23) ([LucasLarson](https://github.com/LucasLarson))
 - send informational text to standard error [\#22](https://github.com/LucasLarson/update/pull/22) ([LucasLarson](https://github.com/LucasLarson))
