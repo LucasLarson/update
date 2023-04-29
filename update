@@ -64,9 +64,9 @@ command printf -- 'checking for npm installation...\n' >&2
 if command -v -- npm >/dev/null 2>&1; then
   command printf -- '...and whether this device is can update Node quickly...\n' >&2
   if test "$(command getconf -- LONG_BIT)" -gt 32; then
-    while test -n "$(command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -print)"; do command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -delete; done
+    while test "$(command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -print)" != ''; do command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -delete; done
     command npm install --location=global --loglevel=verbose -- npm
-    while test -n "$(command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -print)"; do command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -delete; done
+    while test "$(command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -print)" != ''; do command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -delete; done
     command npm update --location=global --loglevel=verbose
   else
     command printf -- 'skipping Node update...\n\n' >&2
