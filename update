@@ -62,16 +62,16 @@ command printf -- '\360\237\246\200  checking for Rust installation...\n' >&2
 if command -v -- rustup >/dev/null 2>&1; then command rustup --verbose update; else command printf -- 'no Rust installation detected.\n\n' >&2; fi
 command printf -- 'checking for npm installation...\n' >&2
 if command -v -- npm >/dev/null 2>&1; then
-  command printf -- '...and whether this device is can update Node quickly...\n' >&2
+  command printf -- '...and whether this device is can update npm quickly...\n' >&2
   if test "$(command getconf -- LONG_BIT)" -gt 32; then
     while test "$(command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -print)" != ''; do command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -delete; done
     command npm install --location=global --loglevel=verbose -- npm
     while test "$(command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -print)" != ''; do command find -- "$(command npm config --location=global get prefix)" -name '.DS_Store' -type f -delete; done
     command npm update --location=global --loglevel=verbose
   else
-    command printf -- 'skipping Node update...\n\n' >&2
+    command printf -- 'skipping npm update...\n\n' >&2
     command sleep -- 1
-    command printf -- 'to update Node later, run:\n\n' >&2
+    command printf -- 'to update npm later, run:\n\n' >&2
     command printf -- '    npm install --location=global npm \046\046 \134\n' >&2
     command printf -- '    npm update --location=global --loglevel=verbose\n\n\n' >&2
     command sleep -- 3
