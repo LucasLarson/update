@@ -10,6 +10,7 @@ while test "${i-}" -lt "$(command getconf -- CHAR_MAX)"; do
   if test "$((i / 3 % 2))" -eq '0'; then command printf -- '.' >&2; else command printf -- '\b' >&2; fi
   i="$((i + 1))"
 done
+i=''
 unset -v -- i 2>/dev/null
 command printf -- '\n\n' >&2
 { command ping -c 1 -- one.one.one.one >/dev/null 2>&1 && command ping -c 1 -- 8.8.8.8 >/dev/null 2>&1; } || {
@@ -100,6 +101,7 @@ if command -v -- python3 >/dev/null 2>&1; then
   if command -v -- pip >/dev/null 2>&1; then
     command printf -- '\n\360\237\220\215  updating outdated Python packages...\n' >&2
     command pip list --format=columns --outdated | command awk -- 'NR > 2 {print $1}' | while IFS='' read -r package; do command pip install --upgrade --verbose --verbose -- "${package-}"; done
+    package=''
     unset -v -- package 2>/dev/null
   fi
   command printf -- 'checking for pyenv installation...\n' >&2
@@ -121,6 +123,7 @@ if command -v -- omz >/dev/null 2>&1; then omz update 2>/dev/null; fi
 # shellcheck disable=SC1090
 test -r "${HOME%/}"'/.'"$(command basename -- "${SHELL%%[0-9-]*}")"'rc' && . "${HOME%/}"'/.'"$(command basename -- "${SHELL%%[0-9-]*}")"'rc'
 if command -v -- rehash >/dev/null 2>&1; then rehash; fi
+update=''
 unset -v -- update 2>/dev/null
 command printf -- '\n\342%s\234\205  update complete\n' "${update-}" >&2
 "$(command -v -- exec)" -l -- "${SHELL##*/}"
