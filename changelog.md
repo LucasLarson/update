@@ -15,7 +15,7 @@
 
 **Merged pull requests:**
 
-- bump github/super-linter from 4 to 5 [\#26](https://github.com/LucasLarson/update/pull/26) ([dependabot[bot]](https://github.com/apps/dependabot))
+- bump github/super-linter from 4 to 5 [\#26](https://github.com/LucasLarson/update/pull/26) ([dependabot[bot]](<https://github.com/apps/dependabot>))
 - use more common npm syntax [\#24](https://github.com/LucasLarson/update/pull/24) ([LucasLarson](https://github.com/LucasLarson))
 - send informational text to standard error [\#23](https://github.com/LucasLarson/update/pull/23) ([LucasLarson](https://github.com/LucasLarson))
 - send informational text to standard error [\#22](https://github.com/LucasLarson/update/pull/22) ([LucasLarson](https://github.com/LucasLarson))
@@ -38,8 +38,8 @@
 - add `codeowners` with single entry [\#8](https://github.com/LucasLarson/update/pull/8) ([LucasLarson](https://github.com/LucasLarson))
 - add kitchen-sink @Dependabot configuration [\#7](https://github.com/LucasLarson/update/pull/7) ([LucasLarson](https://github.com/LucasLarson))
 - add license [\#5](https://github.com/LucasLarson/update/pull/5) ([LucasLarson](https://github.com/LucasLarson))
-- Configure Renovate [\#3](https://github.com/LucasLarson/update/pull/3) ([renovate[bot]](https://github.com/apps/renovate))
-- Configure WhiteSource Bolt for GitHub [\#1](https://github.com/LucasLarson/update/pull/1) ([mend-bolt-for-github[bot]](https://github.com/apps/mend-bolt-for-github))
+- Configure Renovate [\#3](https://github.com/LucasLarson/update/pull/3) ([renovate[bot]](<https://github.com/apps/renovate>))
+- Configure WhiteSource Bolt for GitHub [\#1](https://github.com/LucasLarson/update/pull/1) ([mend-bolt-for-github[bot]](<https://github.com/apps/mend-bolt-for-github>))
 
 ## [v0.0.0](https://github.com/LucasLarson/update/tree/v0.0.0) (2021-11-30)
 
