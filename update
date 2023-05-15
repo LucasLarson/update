@@ -98,9 +98,9 @@ if command -v -- python3 >/dev/null 2>&1; then
   command printf -- '\n\360\237\220\215  verifying Python\342\200\231s packager is up to date...\n' >&2
   command python3 -m pip install --upgrade --verbose --verbose -- pip
   command printf -- 'verifying pip installation...\n' >&2
-  if command -v -- pip >/dev/null 2>&1; then
+  if command python3 -m pip >/dev/null 2>&1; then
     command printf -- '\n\360\237\220\215  updating outdated Python packages...\n' >&2
-    command pip list --format=columns --outdated | command awk -- 'NR > 2 {print $1}' | while IFS='' read -r package; do command pip install --upgrade --verbose --verbose -- "${package-}"; done
+    command python3 -m pip list --format=columns --outdated | command awk -- 'NR > 2 {print $1}' | while IFS='' read -r package; do command python3 -m pip install --upgrade --verbose --verbose -- "${package-}"; done
     package=''
     unset -v -- package 2>/dev/null
   fi
