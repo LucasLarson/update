@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-update='1'
+update='2023-05-22'
 IFS="$(command printf -- ' \t\n|')"
 IFS="${IFS%'|'}"
 command printf -- '\n\n                 .___       __\n __ ________   __\174 _\057____ _\057  \174_  ____\n\174  \174  \134____ \134 \057 __ \174\134__  \134\134   __\134\057 __ \134\n\174  \174  \057  \174_\076 \076 \057_\057 \174 \057 __ \134\174  \174 \134  ___\057\n\174____\057\174   __\057\134____ \174\050____  \057__\174  \134___  \076\n      \174__\174        \134\057     \134\057          \134\057\n a Lucas Larson production\n\n' >&2 && command sleep -- 1
@@ -124,4 +124,4 @@ if command -v -- rehash >/dev/null 2>&1; then rehash; fi
 update=''
 unset -v -- update 2>/dev/null
 command printf -- '\n\342%s\234\205  update complete\n' "${update-}" >&2
-"$(command -v -- exec)" -l -- "${SHELL##*/}" # 2023-05-21
+"$(command -v -- exec)" -l -- "${SHELL##*/}"
