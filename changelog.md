@@ -7,6 +7,7 @@
 **Implemented enhancements:**
 
 - find syntax [\#19](https://github.com/LucasLarson/update/issues/19)
+- restore date of last modification to script [\#28](https://github.com/LucasLarson/update/pull/28) ([LucasLarson](https://github.com/LucasLarson))
 - skip loading run-commands file load before shell restart [\#27](https://github.com/LucasLarson/update/pull/27) ([LucasLarson](https://github.com/LucasLarson))
 - ensure `~/.Brewfile` opens with Ruby hashbang [\#17](https://github.com/LucasLarson/update/pull/17) ([LucasLarson](https://github.com/LucasLarson))
 
