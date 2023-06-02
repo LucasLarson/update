@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-update='2023-05-22'
+update='2023-06-01'
 IFS="$(command printf -- ' \t\n|')"
 IFS="${IFS%'|'}"
 command printf -- '\n\n                 .___       __\n __ ________   __\174 _\057____ _\057  \174_  ____\n\174  \174  \134____ \134 \057 __ \174\134__  \134\134   __\134\057 __ \134\n\174  \174  \057  \174_\076 \076 \057_\057 \174 \057 __ \134\174  \174 \134  ___\057\n\174____\057\174   __\057\134____ \174\050____  \057__\174  \134___  \076\n      \174__\174        \134\057     \134\057          \134\057\n a Lucas Larson production\n\n' >&2 && command sleep -- 1
@@ -100,7 +100,7 @@ if command -v -- python3 >/dev/null 2>&1; then
   command printf -- 'verifying pip installation...\n' >&2
   if command python3 -m pip >/dev/null 2>&1; then
     command printf -- '\n\360\237\220\215  updating outdated Python packages...\n' >&2
-    command python3 -m pip list --format=columns --outdated | command sed -n -e '3,$ s/^\([^[:space:]]*\).*/\1/p' | while IFS='' read -r package; do command python3 -m pip install --upgrade --verbose --verbose -- "${package-}"; done
+    command python3 -m pip list --format=columns --outdated | command sed -n -e '3,$ s/^\([^[:space:]]*\).*/\1/p' | while IFS='' read -r -- package; do command python3 -m pip install --upgrade --verbose --verbose -- "${package-}"; done
     package=''
     unset -v -- package 2>/dev/null
   fi
