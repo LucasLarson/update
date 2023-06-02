@@ -14,13 +14,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 4
-    if: "!contains(github.event.head_commit.message, 'update changelog')"
+    if: ${{ !contains(github.event.head_commit.message, 'update changelog') }}
     steps:
       - uses: actions/checkout@v3
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.0
+          ruby-version: 3.2.0
       - name: Install `github_changelog_generator`
         run: |
           command gem install github_changelog_generator
@@ -31,36 +31,48 @@ jobs:
       - name: Build and commit changelog
         run: |
           file="$(
-            (
-              command find -- . \
-                -maxdepth 1 \
-                -type f \
-                -name '*.m*d*' \
-                '(' \
-                -name 'change*log*' -o \
-                -name 'CHANGE*LOG*' \
-                ')' \
-                -print &
-            ) |
-              # print only the first match
-              command head -n 1
+            cd "$(
+              # attempt relative-path access
+              command git rev-parse \
+                --path-format=relative \
+                --show-toplevel
+              )" 2>/dev/null ||
+              cd "$(
+                command git rev-parse \
+                --show-toplevel
+              )" ||
+              exit "${?:-1}"
+            # find the Markdown changelog with the latest commit
+            command find -- "${PWD%/}" \
+              -path "${PWD%/}"'/[Cc][Hh][Aa][Nn][Gg][Ee]*[Ll][Oo][Gg]*' \
+              -path '.[Mm]*[Dd]*' \
+              -type f \
+              -exec sh -c '
+          command git log \
+            --max-count=1 \
+            --pretty=tformat:'\''%at '\''"${1-}"
+              ' _ {} ';' |
+              LC_ALL='C' command sort -n -r |
+              command sed \
+                -n \
+                -e '1s/.*\///g' \
+                -e '1p' \
+                -e 'q'
           )"
           # define changelog location if none is found
-          file="${file:=./changelog.md}"
+          file="${file:=changelog.md}"
           # ensure the file exists
           command touch -- "${file-}"
-          # trim the initial `./` for `github_changelog_generator`
-          file="${file#*[.][/]}"
           # create local changes
           command github_changelog_generator \
             --user "$(
               command git ls-remote --get-url |
                 command sed \
                   -e '# replace colons with forward slashes' \
-                  -e 'y/:/\//' \
+                  -e 's/:/\//g' \
                   -e '# remove everything except the second-to-last' \
                   -e '# forward slash-delimited field' \
-                  -e 's/.*\/\([^/]*\)\/[^/]*/\1/' \
+                  -e 's/.*\/\([^/]*\)\/[^/]*/\1/'
             )" \
             --project "$(
               command git ls-remote --get-url |
@@ -68,7 +80,7 @@ jobs:
                   -e 's/.*\///' \
                   -e 's/\.git$//'
             )" \
-            --token ${{ secrets.GITHUB_TOKEN || secrets.PAT }} \
+            --token ${{ secrets.GITHUB_TOKEN }} \
             --exclude-labels 'duplicate,question,invalid,wontfix,nodoc' \
             --output "${file-}"
           # repair changelog credit
@@ -85,12 +97,13 @@ jobs:
           # commit files
           command git config -- user.email 'actions@github.com'
           command git config -- user.name 'GitHub'
+          command git restore --progress --staged -- .
           command git add --verbose -- ./"${file-}"
           command git commit --verbose --message='update changelog' ||
             exit 0
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN || secrets.PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
 ...
