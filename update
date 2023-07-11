@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
-update='2023-06-25'
-IFS="$(command printf -- ' \t\n|')"
-IFS="${IFS%'|'}"
+update='2023-07-15'
+IFS="$(command printf -- ' \t\n|')" && IFS="${IFS%'|'}"
 command printf -- '\n\n                 .___       __\n __ ________   __\174 _\057____ _\057  \174_  ____\n\174  \174  \134____ \134 \057 __ \174\134__  \134\134   __\134\057 __ \134\n\174  \174  \057  \174_\076 \076 \057_\057 \174 \057 __ \134\174  \174 \134  ___\057\n\174____\057\174   __\057\134____ \174\050____  \057__\174  \134___  \076\n      \174__\174        \134\057     \134\057          \134\057\n a Lucas Larson production\n\n' >&2 && command sleep 1
 command printf -- '\360\237\223\241  verifying network connectivity' >&2
 command sleep 1
@@ -13,10 +12,17 @@ done
 i=''
 unset -v -- i 2>/dev/null
 command printf -- '\n\n' >&2
-{ command ping -c 1 -- one.one.one.one >/dev/null 2>&1 && command ping -c 1 -- 8.8.8.8 >/dev/null 2>&1; } || {
+{ command ping -c 1 -- one.one.one.one >/dev/null 2>&1 && command ping -c 1 -- 9.9.9.9 >/dev/null 2>&1; } || {
   update="${?-}"
   command printf -- 'No internet connection detected.\nAborting update.\n' >&2
   return "${update:-1}"
+}
+set -- 'https://lucaslarson.net/update'
+command test "$({ command wget --output-document=- --quiet -- "${1-}" || command curl --location --silent -- "${1-}"; } 2>/dev/null | command sed -n -e '/update=/ {' -e 's/[^[:digit:]]//gp' -e 'q' -e '}')" -le "$(command printf -- '%s\n' "${update-}" | command sed -e 's/[^[:digit:]]//g')" || {
+  command printf -- 'An update to this updater is available\041 Download it from here:\n%s\n' "${1-}" >&2
+  update=''
+  unset -v -- update 2>/dev/null
+  exit
 }
 command printf -- '\360\237\215\272  checking for Homebrew installation...' >&2
 if command -v -- brew >/dev/null 2>&1; then
@@ -114,7 +120,7 @@ if command -v -- python3 >/dev/null 2>&1; then
 fi
 if command -v -- brew >/dev/null 2>&1; then
   command brew generate-man-completions --debug --verbose 2>/dev/null
-  command brew bundle dump --all --cask --debug --describe --file=- --force --formula --mas --no-restart --tap --verbose --whalebrew | command sed -e '$!N' -e '/^#.*\n[^#]/s/\n/\t/' -e 'P' -e 'D' | command awk -F '\t' -- '{print $2 $1}' | command sed -e 's/^\(tap\)/1\1/' -e 's/^\(brew\)/2\1/' -e 's/^\(cask\)/3\1/' | LC_ALL='C' command sort -f | {
+  command brew bundle dump --all --cask --debug --describe --file=- --force --formula --mas --no-restart --tap --verbose --vscode --whalebrew | command sed -e '$! N' -e '/^#.*\n[^#]/ s/\n/\t/' -e 'P' -e 'D' | command awk -F '\t' -- '{print $2 $1}' | command sed -e 's/^\(tap\)/1\1/' -e 's/^\(brew\)/2\1/' -e 's/^\(cask\)/3\1/' | LC_ALL='C' command sort -f | {
     command printf -- '#!/usr/bin/env ruby\n'
     command sed -e 's/^[[:digit:]]//' -e 's/\([^#]*\)\(#.*\)/\2\n\1/'
   } >"${HOME%/}"'/.Brewfile'
