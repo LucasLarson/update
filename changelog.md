@@ -2,11 +2,32 @@
 
 ## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.0.0...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.2.0...HEAD)
+
+**Merged pull requests:**
+
+- bump actions/checkout from 3 to 4 [\#34](https://github.com/LucasLarson/update/pull/34) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [v1.2.0](https://github.com/LucasLarson/update/tree/v1.2.0) (2023-07-21)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.1.0...v1.2.0)
+
+**Implemented enhancements:**
+
+- feature: add check for a newer version of this script from within script [\#15](https://github.com/LucasLarson/update/issues/15)
+
+**Merged pull requests:**
+
+- ensure script can be sourced or copied and pasted [\#32](https://github.com/LucasLarson/update/pull/32) ([LucasLarson](https://github.com/LucasLarson))
+
+## [v1.1.0](https://github.com/LucasLarson/update/tree/v1.1.0) (2023-07-11)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.0.0...v1.1.0)
 
 **Implemented enhancements:**
 
 - find syntax [\#19](https://github.com/LucasLarson/update/issues/19)
+- notify when new script version is available [\#29](https://github.com/LucasLarson/update/pull/29) ([LucasLarson](https://github.com/LucasLarson))
 - restore date of last modification to script [\#28](https://github.com/LucasLarson/update/pull/28) ([LucasLarson](https://github.com/LucasLarson))
 - skip loading run-commands file load before shell restart [\#27](https://github.com/LucasLarson/update/pull/27) ([LucasLarson](https://github.com/LucasLarson))
 - ensure `~/.Brewfile` opens with Ruby hashbang [\#17](https://github.com/LucasLarson/update/pull/17) ([LucasLarson](https://github.com/LucasLarson))
