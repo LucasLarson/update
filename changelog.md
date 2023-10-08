@@ -2,10 +2,19 @@
 
 ## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.2.0...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.2.1...HEAD)
 
 **Merged pull requests:**
 
+- harmonize space formatting [\#37](https://github.com/LucasLarson/update/pull/37) ([LucasLarson](https://github.com/LucasLarson))
+
+## [v1.2.1](https://github.com/LucasLarson/update/tree/v1.2.1) (2023-10-05)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.2.0...v1.2.1)
+
+**Merged pull requests:**
+
+- ensure correct exit when offline \(\#32\) [\#36](https://github.com/LucasLarson/update/pull/36) ([LucasLarson](https://github.com/LucasLarson))
 - bump actions/checkout from 3 to 4 [\#34](https://github.com/LucasLarson/update/pull/34) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v1.2.0](https://github.com/LucasLarson/update/tree/v1.2.0) (2023-07-21)
