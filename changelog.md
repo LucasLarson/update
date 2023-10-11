@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- bump ad-m/github-push-action from v0.6.0 to v0.8.0 [\#38](https://github.com/LucasLarson/update/pull/38) ([renovate[bot]](https://github.com/apps/renovate))
 - harmonize space formatting [\#37](https://github.com/LucasLarson/update/pull/37) ([LucasLarson](https://github.com/LucasLarson))
 
 ## [v1.2.1](https://github.com/LucasLarson/update/tree/v1.2.1) (2023-10-05)
