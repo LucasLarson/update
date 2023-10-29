@@ -1,11 +1,20 @@
 # Changelog
 
-## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+## [v1.3.1](https://github.com/LucasLarson/update/tree/v1.3.1) (2023-10-29)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.2.1...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.3.0...v1.3.1)
 
 **Merged pull requests:**
 
+- feat: prevent modifying `~/.wget-hsts` [\#40](https://github.com/LucasLarson/update/pull/40) ([LucasLarson](https://github.com/LucasLarson))
+
+## [v1.3.0](https://github.com/LucasLarson/update/tree/v1.3.0) (2023-10-26)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.2.1...v1.3.0)
+
+**Merged pull requests:**
+
+- feat: add Cabal support [\#39](https://github.com/LucasLarson/update/pull/39) ([LucasLarson](https://github.com/LucasLarson))
 - bump ad-m/github-push-action from v0.6.0 to v0.8.0 [\#38](https://github.com/LucasLarson/update/pull/38) ([renovate[bot]](https://github.com/apps/renovate))
 - harmonize space formatting [\#37](https://github.com/LucasLarson/update/pull/37) ([LucasLarson](https://github.com/LucasLarson))
 
