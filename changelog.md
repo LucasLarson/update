@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.3.1...HEAD)
+
+**Closed issues:**
+
+- for utilities POSIX guarantees, use `command -p` instead of `command` [\#41](https://github.com/LucasLarson/update/issues/41)
+
+**Merged pull requests:**
+
+- perf: prepend POSIX utilities with `command -p` [\#42](https://github.com/LucasLarson/update/pull/42) ([LucasLarson](https://github.com/LucasLarson))
+
 ## [v1.3.1](https://github.com/LucasLarson/update/tree/v1.3.1) (2023-10-29)
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.3.0...v1.3.1)
