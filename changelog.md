@@ -6,10 +6,12 @@
 
 **Closed issues:**
 
+- `npm` prompts the user to fund packages [\#44](https://github.com/LucasLarson/update/issues/44)
 - inconsistent `npm` instructions [\#43](https://github.com/LucasLarson/update/issues/43)
 
 **Merged pull requests:**
 
+- suppress `npm` fundraising prompts [\#47](https://github.com/LucasLarson/update/pull/47) ([LucasLarson](https://github.com/LucasLarson))
 - keep `npm` recommendations consistent [\#46](https://github.com/LucasLarson/update/pull/46) ([LucasLarson](https://github.com/LucasLarson))
 
 ## [v1.4.0](https://github.com/LucasLarson/update/tree/v1.4.0) (2024-01-11)
