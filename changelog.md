@@ -2,7 +2,19 @@
 
 ## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.3.1...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.0...HEAD)
+
+**Closed issues:**
+
+- inconsistent `npm` instructions [\#43](https://github.com/LucasLarson/update/issues/43)
+
+**Merged pull requests:**
+
+- keep `npm` recommendations consistent [\#46](https://github.com/LucasLarson/update/pull/46) ([LucasLarson](https://github.com/LucasLarson))
+
+## [v1.4.0](https://github.com/LucasLarson/update/tree/v1.4.0) (2024-01-11)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.3.1...v1.4.0)
 
 **Closed issues:**
 
