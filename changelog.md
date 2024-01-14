@@ -2,11 +2,23 @@
 
 ## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.0...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.1...HEAD)
 
 **Closed issues:**
 
+- inconsistent `test` calls [\#45](https://github.com/LucasLarson/update/issues/45)
 - `npm` prompts the user to fund packages [\#44](https://github.com/LucasLarson/update/issues/44)
+
+**Merged pull requests:**
+
+- perf: prepend all `test` calls with `command -p` [\#48](https://github.com/LucasLarson/update/pull/48) ([LucasLarson](https://github.com/LucasLarson))
+
+## [v1.4.1](https://github.com/LucasLarson/update/tree/v1.4.1) (2024-01-13)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.0...v1.4.1)
+
+**Closed issues:**
+
 - inconsistent `npm` instructions [\#43](https://github.com/LucasLarson/update/issues/43)
 
 **Merged pull requests:**
