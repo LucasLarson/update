@@ -2,11 +2,28 @@
 
 ## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.1...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.2...HEAD)
+
+**Fixed bugs:**
+
+- user `$IFS` is modified [\#51](https://github.com/LucasLarson/update/issues/51)
 
 **Closed issues:**
 
+- reduce preposition usage duplication [\#49](https://github.com/LucasLarson/update/issues/49)
 - inconsistent `test` calls [\#45](https://github.com/LucasLarson/update/issues/45)
+
+**Merged pull requests:**
+
+- fix: protect user `$IFS` from modification \(\#51\) [\#54](https://github.com/LucasLarson/update/pull/54) ([LucasLarson](https://github.com/LucasLarson))
+- docs: reword download prompt [\#52](https://github.com/LucasLarson/update/pull/52) ([LucasLarson](https://github.com/LucasLarson))
+
+## [v1.4.2](https://github.com/LucasLarson/update/tree/v1.4.2) (2024-01-14)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.1...v1.4.2)
+
+**Closed issues:**
+
 - `npm` prompts the user to fund packages [\#44](https://github.com/LucasLarson/update/issues/44)
 
 **Merged pull requests:**
