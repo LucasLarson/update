@@ -10,12 +10,14 @@
 
 **Closed issues:**
 
+- clear variables with fewer steps [\#53](https://github.com/LucasLarson/update/issues/53)
 - add `--verbose` to `brew upgrade` [\#50](https://github.com/LucasLarson/update/issues/50)
 - reduce preposition usage duplication [\#49](https://github.com/LucasLarson/update/issues/49)
 - inconsistent `test` calls [\#45](https://github.com/LucasLarson/update/issues/45)
 
 **Merged pull requests:**
 
+- refactor: unset variables with graceful degradation \(\#53\) [\#56](https://github.com/LucasLarson/update/pull/56) ([LucasLarson](https://github.com/LucasLarson))
 - feat: add `--verbose` option to `brew upgrade` \(\#50\) [\#55](https://github.com/LucasLarson/update/pull/55) ([LucasLarson](https://github.com/LucasLarson))
 - fix: protect user `$IFS` from modification \(\#51\) [\#54](https://github.com/LucasLarson/update/pull/54) ([LucasLarson](https://github.com/LucasLarson))
 - docs: reword download prompt [\#52](https://github.com/LucasLarson/update/pull/52) ([LucasLarson](https://github.com/LucasLarson))
