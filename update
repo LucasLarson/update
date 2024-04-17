@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-update='2024-02-07'
+update='2024-04-17'
 command -p -- printf -- '\n\n                 .___       __\n __ ________   __\174 _\057____ _\057  \174_  ____\n\174  \174  \134____ \134 \057 __ \174\134__  \134\134   __\134\057 __ \134\n\174  \174  \057  \174_\076 \076 \057_\057 \174 \057 __ \134\174  \174 \134  ___\057\n\174____\057\174   __\057\134____ \174\050____  \057__\174  \134___  \076\n      \174__\174        \134\057     \134\057          \134\057\n a Lucas Larson production\n\n' >&2 && command -p -- sleep 1
 command -p -- printf -- '\360\237\223\241  verifying network connectivity' >&2
 command -p -- sleep 1
@@ -121,7 +121,7 @@ if command -v -- brew >/dev/null 2>&1; then
   command brew bundle dump --all --cask --debug --describe --file=- --force --formula --mas --no-restart --tap --verbose --vscode --whalebrew | command -p -- sed -e '$! N' -e '/^#.*\n[^#]/ s/\n/\t/' -e 'P' -e 'D' | command -p -- sed -e 's/\(.*\)\t\(.*\)/\2\1/' | command -p -- sed -e 's/^\(tap\)/1\1/' -e 's/^\(brew\)/2\1/' -e 's/^\(cask\)/3\1/' | LC_ALL='C' command -p -- sort -f | {
     command -p -- printf -- '#!/usr/bin/env ruby\n'
     command -p -- sed -e 's/^[[:digit:]]//' -e 's/\([^#]*\)\(#.*\)/\2\n\1/'
-  } >"${HOME%/}"'/.Brewfile'
+  } >"${HOMEBREW_BUNDLE_FILE_GLOBAL:-${HOMEBREW_BUNDLE_FILE:-${HOME%/}/.Brewfile}}"
 fi
 if command -v -- omz >/dev/null 2>&1; then omz update 2>/dev/null; fi
 if command -v -- rehash >/dev/null 2>&1; then rehash; fi
