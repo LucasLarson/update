@@ -2,7 +2,20 @@
 
 ## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.2...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.3...HEAD)
+
+**Implemented enhancements:**
+
+- use preferred `Brewfile` location if possible [\#57](https://github.com/LucasLarson/update/issues/57)
+- fix: use preferred `Brewfile` location [\#58](https://github.com/LucasLarson/update/pull/58) ([LucasLarson](https://github.com/LucasLarson))
+
+**Closed issues:**
+
+- clear variables with fewer steps [\#53](https://github.com/LucasLarson/update/issues/53)
+
+## [v1.4.3](https://github.com/LucasLarson/update/tree/v1.4.3) (2024-02-08)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.2...v1.4.3)
 
 **Fixed bugs:**
 
@@ -10,7 +23,6 @@
 
 **Closed issues:**
 
-- clear variables with fewer steps [\#53](https://github.com/LucasLarson/update/issues/53)
 - add `--verbose` to `brew upgrade` [\#50](https://github.com/LucasLarson/update/issues/50)
 - reduce preposition usage duplication [\#49](https://github.com/LucasLarson/update/issues/49)
 - inconsistent `test` calls [\#45](https://github.com/LucasLarson/update/issues/45)
