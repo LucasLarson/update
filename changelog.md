@@ -13,6 +13,10 @@
 
 - clear variables with fewer steps [\#53](https://github.com/LucasLarson/update/issues/53)
 
+**Merged pull requests:**
+
+- fix: ensure `rubocop`-compliant `Brewfile` [\#60](https://github.com/LucasLarson/update/pull/60) ([LucasLarson](https://github.com/LucasLarson))
+
 ## [v1.4.3](https://github.com/LucasLarson/update/tree/v1.4.3) (2024-02-08)
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.2...v1.4.3)
