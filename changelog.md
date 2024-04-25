@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.3...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.4...HEAD)
+
+**Merged pull requests:**
+
+- fix: repair update-available behavior [\#63](https://github.com/LucasLarson/update/pull/63) ([LucasLarson](https://github.com/LucasLarson))
+
+## [v1.4.4](https://github.com/LucasLarson/update/tree/v1.4.4) (2024-04-21)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.3...v1.4.4)
 
 **Implemented enhancements:**
 
