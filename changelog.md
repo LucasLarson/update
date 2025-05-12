@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.4...HEAD)
 
+**Implemented enhancements:**
+
+- feat: retain `svgo` release candidate after `npm update` [\#65](https://github.com/LucasLarson/update/pull/65) ([LucasLarson](https://github.com/LucasLarson))
+
 **Merged pull requests:**
 
 - fix: repair update-available behavior [\#63](https://github.com/LucasLarson/update/pull/63) ([LucasLarson](https://github.com/LucasLarson))
