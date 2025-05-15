@@ -1,8 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+## [v1.4.6](https://github.com/LucasLarson/update/tree/v1.4.6) (2025-05-15)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.4...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.5...v1.4.6)
+
+## [v1.4.5](https://github.com/LucasLarson/update/tree/v1.4.5) (2025-05-12)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.4...v1.4.5)
 
 **Implemented enhancements:**
 
