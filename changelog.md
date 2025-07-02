@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.5.0](https://github.com/LucasLarson/update/tree/v1.5.0) (2025-07-02)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.6...v1.5.0)
+
 ## [v1.4.6](https://github.com/LucasLarson/update/tree/v1.4.6) (2025-05-15)
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.5...v1.4.6)
