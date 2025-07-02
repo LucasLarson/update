@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-update='2025-06-23'
+update='2025-07-02'
 command -p -- printf -- '\n\n                 .___       __\n __ ________   __\174 _\057____ _\057  \174_  ____\n\174  \174  \134____ \134 \057 __ \174\134__  \134\134   __\134\057 __ \134\n\174  \174  \057  \174_\076 \076 \057_\057 \174 \057 __ \134\174  \174 \134  ___\057\n\174____\057\174   __\057\134____ \174\050____  \057__\174  \134___  \076\n      \174__\174        \134\057     \134\057          \134\057\n a Lucas Larson production\n\n' >&2 && command -p -- sleep 1
 command -p -- printf -- '\360\237\223\241  verifying network connectivity' >&2
 command -p -- sleep 1
@@ -8,7 +8,7 @@ while command -p -- test "${i-}" -lt "$(command -p -- getconf -- CHAR_MAX)"; do
   if command -p -- test "$((i / 3 % 2))" -eq '0'; then command -p -- printf -- '.' >&2; else command -p -- printf -- '\b' >&2; fi
   i="$((i + 1))"
 done
-unset -v -- i 2>/dev/null || i=''
+unset -v -- i >/dev/null 2>&1 || i=''
 command -p -- printf -- '\n\n' >&2
 { command ping -c 1 -- one.one.one.one >/dev/null 2>&1 && command ping -c 1 -- 9.9.9.9 >/dev/null 2>&1; } || {
   update="${?-}"
@@ -18,7 +18,7 @@ command -p -- printf -- '\n\n' >&2
 set -- 'https://lucaslarson.net/update'
 command -p -- test "$({ command wget --hsts-file=/dev/null --output-document=- --quiet -- "${1-}" || command curl --location --silent -- "${1-}"; } 2>/dev/null | command -p -- sed -n -e '/update=/ {' -e 's/[^[:digit:]]//gp' -e 'q' -e '}')" -le "$(command -p -- printf -- '%s\n' "${update-}" | command -p -- sed -e 's/[^[:digit:]]//g')" || {
   command -p -- printf -- 'An update to this updater is available\041 Download it here:\n%s\n' "${1-}" >&2
-  unset -v -- update 2>/dev/null || update=''
+  unset -v -- update >/dev/null 2>&1 || update=''
   case "${SHELL##*/}" in *"${0##*-}") return "${update:-1}" ;; *) exit "${update:-1}" ;; esac
 }
 command -p -- printf -- '\360\237\215\272  checking for Homebrew installation...' >&2
@@ -105,7 +105,7 @@ if command -v -- python3 >/dev/null 2>&1; then
   if command python3 -m pip >/dev/null 2>&1; then
     command -p -- printf -- '\n\360\237\220\215  updating outdated Python packages...\n' >&2
     command python3 -m pip list --format=columns --outdated | command -p -- sed -n -e '3,$ s/^\([^[:space:]]*\).*/\1/p' | while IFS='' read -r -- package; do command python3 -m pip install --upgrade --verbose --verbose -- "${package-}"; done
-    unset -v -- package 2>/dev/null || package=''
+    unset -v -- package >/dev/null 2>&1 || package=''
   fi
   command -p -- printf -- 'checking for pyenv installation...\n' >&2
   if command -v -- pyenv >/dev/null 2>&1; then
@@ -125,6 +125,6 @@ if command -v -- brew >/dev/null 2>&1; then
 fi
 if command -v -- omz >/dev/null 2>&1; then omz update 2>/dev/null; fi
 if command -v -- rehash >/dev/null 2>&1; then rehash; fi
-unset -v -- update 2>/dev/null || update=''
+unset -v -- update >/dev/null 2>&1 || update=''
 command -p -- printf -- '\n\342\234\205  update complete\n' >&2
 case "${SHELL##*/}" in *"${0##*-}") return ;; *) exit ;; esac
