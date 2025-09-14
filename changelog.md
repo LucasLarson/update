@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.5.0...HEAD)
+
+**Merged pull requests:**
+
+- chore\(deps\): bump super-linter from v5 to v6 [\#61](https://github.com/LucasLarson/update/pull/61) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.5.0](https://github.com/LucasLarson/update/tree/v1.5.0) (2025-07-02)
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.4.6...v1.5.0)
