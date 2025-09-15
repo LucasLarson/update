@@ -7,6 +7,7 @@
 **Merged pull requests:**
 
 - chore\(deps\): bump ad-m/github-push-action from v0.8.0 to v1.0.0 [\#67](https://github.com/LucasLarson/update/pull/67) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): bump actions/checkout from v4 to v5 [\#66](https://github.com/LucasLarson/update/pull/66) ([renovate[bot]](https://github.com/apps/renovate))
 - chore\(deps\): bump super-linter from v5 to v6 [\#61](https://github.com/LucasLarson/update/pull/61) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v1.5.0](https://github.com/LucasLarson/update/tree/v1.5.0) (2025-07-02)
