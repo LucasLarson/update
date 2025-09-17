@@ -7,6 +7,7 @@
 **Merged pull requests:**
 
 - fix: prevent GitHub Actions credential persistence \(artipacked\) [\#73](https://github.com/LucasLarson/update/pull/73) ([LucasLarson](https://github.com/LucasLarson))
+- chore\(deps\): bump super-linter from v7 to v8 [\#72](https://github.com/LucasLarson/update/pull/72) ([dependabot[bot]](https://github.com/apps/dependabot))
 - style: apply `prettier` to YAML content [\#70](https://github.com/LucasLarson/update/pull/70) ([LucasLarson](https://github.com/LucasLarson))
 - fix: set GitHub actions permissions to `write` \(CKV2\_GHA\_1\) [\#69](https://github.com/LucasLarson/update/pull/69) ([LucasLarson](https://github.com/LucasLarson))
 - chore\(deps\): bump github/super-linter from v6 to v7 [\#68](https://github.com/LucasLarson/update/pull/68) ([dependabot[bot]](https://github.com/apps/dependabot))
