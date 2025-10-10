@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+## [v1.5.1](https://github.com/LucasLarson/update/tree/v1.5.1) (2025-10-10)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.5.0...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.5.0...v1.5.1)
 
 **Merged pull requests:**
 
