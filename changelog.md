@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.5.1...HEAD)
+
+**Merged pull requests:**
+
+- feat: skip Biome formatting check [\#78](https://github.com/LucasLarson/update/pull/78) ([LucasLarson](https://github.com/LucasLarson))
+
 ## [v1.5.1](https://github.com/LucasLarson/update/tree/v1.5.1) (2025-10-10)
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.5.0...v1.5.1)
