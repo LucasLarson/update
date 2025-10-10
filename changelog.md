@@ -8,6 +8,7 @@
 
 - feat: skip Biome formatting check [\#78](https://github.com/LucasLarson/update/pull/78) ([LucasLarson](https://github.com/LucasLarson))
 - chore\(config\): migrate renovate config [\#75](https://github.com/LucasLarson/update/pull/75) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): bump ruby from 3.2.0 to 3.4.7 [\#74](https://github.com/LucasLarson/update/pull/74) ([renovate[bot]](https://github.com/apps/renovate))
 
 ## [v1.5.1](https://github.com/LucasLarson/update/tree/v1.5.1) (2025-10-10)
 
