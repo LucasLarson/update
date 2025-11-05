@@ -1,12 +1,17 @@
 # Changelog
 
-## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+## [v1.7.0](https://github.com/LucasLarson/update/tree/v1.7.0) (2025-11-05)
 
-[Full Changelog](https://github.com/LucasLarson/update/compare/v1.5.1...HEAD)
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.6.0...v1.7.0)
+
+## [v1.6.0](https://github.com/LucasLarson/update/tree/v1.6.0) (2025-10-10)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.5.1...v1.6.0)
 
 **Merged pull requests:**
 
 - feat: skip Biome formatting check [\#78](https://github.com/LucasLarson/update/pull/78) ([LucasLarson](https://github.com/LucasLarson))
+- fix: do not force unneeded installations [\#77](https://github.com/LucasLarson/update/pull/77) ([LucasLarson](https://github.com/LucasLarson))
 - chore\(config\): migrate renovate config [\#75](https://github.com/LucasLarson/update/pull/75) ([renovate[bot]](https://github.com/apps/renovate))
 - chore\(deps\): bump ruby from 3.2.0 to 3.4.7 [\#74](https://github.com/LucasLarson/update/pull/74) ([renovate[bot]](https://github.com/apps/renovate))
 
