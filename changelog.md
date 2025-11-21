@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.7.0...HEAD)
+
+**Merged pull requests:**
+
+- chore\(deps\): bump actions/checkout from v5 to v6 [\#79](https://github.com/LucasLarson/update/pull/79) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v1.7.0](https://github.com/LucasLarson/update/tree/v1.7.0) (2025-11-05)
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.6.0...v1.7.0)
