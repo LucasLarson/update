@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.8.1](https://github.com/LucasLarson/update/tree/v1.8.1) (2026-05-20)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.8.0...v1.8.1)
+
 ## [v1.8.0](https://github.com/LucasLarson/update/tree/v1.8.0) (2026-05-18)
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.7.0...v1.8.0)
