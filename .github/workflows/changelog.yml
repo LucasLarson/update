@@ -28,37 +28,37 @@ jobs:
           ruby-version: 4.0.5
       - name: Install `github_changelog_generator`
         run: |
-          command gem install github_changelog_generator
+          gem install github_changelog_generator
       - name: Install `markdownlint`
         run: |
-          command npm install markdownlint
-          command npm install markdownlint-cli
+          npm install markdownlint
+          npm install markdownlint-cli
       - name: Build and commit changelog
         run: |
           file="$(
             cd "$(
               # attempt relative-path access
-              command git rev-parse \
+              git rev-parse \
                 --path-format=relative \
                 --show-toplevel
               )" 2>/dev/null ||
               cd "$(
-                command git rev-parse \
+                git rev-parse \
                 --show-toplevel
               )" ||
               exit "${?:-1}"
             # find the Markdown changelog with the latest commit
-            command find -- "${PWD%/}" \
+            find -- "${PWD%/}" \
               -path "${PWD%/}"'/[Cc][Hh][Aa][Nn][Gg][Ee]*[Ll][Oo][Gg]*' \
               -path '.[Mm]*[Dd]*' \
               -type f \
               -exec sh -c '
-          command git log \
+          git log \
             --max-count=1 \
             --pretty=tformat:'\''%at '\''"${1-}"
               ' _ {} ';' |
-              LC_ALL='C' command sort -n -r |
-              command sed \
+              LC_ALL='C' sort -n -r |
+              sed \
                 -n \
                 -e '1s/.*\///g' \
                 -e '1p' \
@@ -67,12 +67,12 @@ jobs:
           # define changelog location if none is found
           file="${file:=changelog.md}"
           # ensure the file exists
-          command touch -- "${file-}"
+          touch -- "${file-}"
           # create local changes
-          command github_changelog_generator \
+          github_changelog_generator \
             --user "$(
-              command git ls-remote --get-url |
-                command sed \
+              git ls-remote --get-url |
+                sed \
                   -e '# replace colons with forward slashes' \
                   -e 's/:/\//g' \
                   -e '# remove everything except the second-to-last' \
@@ -80,8 +80,8 @@ jobs:
                   -e 's/.*\/\([^/]*\)\/[^/]*/\1/'
             )" \
             --project "$(
-              command git ls-remote --get-url |
-                command sed \
+              git ls-remote --get-url |
+                sed \
                   -e 's/.*\///' \
                   -e 's/\.git$//'
             )" \
@@ -89,22 +89,22 @@ jobs:
             --exclude-labels 'duplicate,question,invalid,wontfix,nodoc' \
             --output "${file-}"
           # repair changelog credit
-          command sed \
+          sed \
             -e 's/This Changelog/This changelog/' \
             -e 's/automatically generated/\[automatically generated\]()/' \
             -e 's/\]()/\](.\/.github\/workflows\/changelog.yml)/' \
             -e 's/generator)\*/generator).\*/' \
             ./"${file-}" >./"${file%.*}"_temporary_"${file##*.}" &&
-            command mv -f -- ./"${file%.*}"_temporary_"${file##*.}" ./"${file-}"
+            mv -f -- ./"${file%.*}"_temporary_"${file##*.}" ./"${file-}"
           # lint changelog
-          command npm exec -- markdownlint --fix -- ./"${file-}" ||
+          npm exec -- markdownlint --fix -- ./"${file-}" ||
             :
           # commit files
-          command git config -- user.email 'actions@github.com'
-          command git config -- user.name 'GitHub'
-          command git restore --progress --staged -- .
-          command git add --verbose -- ./"${file-}"
-          command git commit --verbose --message='update changelog' ||
+          git config -- user.email 'actions@github.com'
+          git config -- user.name 'GitHub'
+          git restore --progress --staged -- .
+          git add --verbose -- ./"${file-}"
+          git commit --verbose --message='update changelog' ||
             exit 0
       - name: Push changes
         uses: ad-m/github-push-action@v1.3.0 # zizmor: ignore[unpinned-uses]
