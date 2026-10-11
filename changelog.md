@@ -1,5 +1,18 @@
 # Changelog
 
+## [v1.9.0](https://github.com/LucasLarson/update/tree/v1.9.0) (2026-10-11)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.8.2...v1.9.0)
+
+## [v1.8.2](https://github.com/LucasLarson/update/tree/v1.8.2) (2026-06-10)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.8.1...v1.8.2)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency ruby to v4.0.5 [\#84](https://github.com/LucasLarson/update/pull/84) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update ad-m/github-push-action action to v1.3.0 [\#83](https://github.com/LucasLarson/update/pull/83) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v1.8.1](https://github.com/LucasLarson/update/tree/v1.8.1) (2026-05-20)
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.8.0...v1.8.1)
