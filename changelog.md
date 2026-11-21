@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/LucasLarson/update/tree/HEAD)
+
+[Full Changelog](https://github.com/LucasLarson/update/compare/v1.9.0...HEAD)
+
+**Merged pull requests:**
+
+- chore\(deps\): bump ruby from v4.0.5 to v4.0.10 [\#86](https://github.com/LucasLarson/update/pull/86) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): bump actions/checkout from v6 to v7 [\#85](https://github.com/LucasLarson/update/pull/85) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v1.9.0](https://github.com/LucasLarson/update/tree/v1.9.0) (2026-10-11)
 
 [Full Changelog](https://github.com/LucasLarson/update/compare/v1.8.2...v1.9.0)
